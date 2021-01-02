@@ -96,6 +96,9 @@ const TrainModel = () => {
       else wrong++;
     }
     console.log('Accuracy: ' + correct / yTrue.length);
+
+    // Saving the model
+    await model.save('downloads://my-model');
   };
 
   return (
